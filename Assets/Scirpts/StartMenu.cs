@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class StartMenu : MonoBehaviour
 {
+    public NetworkManager networkManager;
     public TextMeshProUGUI playerNameInput;
     public Button hostGameButton;
     public Button joinGameButton;
@@ -13,6 +14,12 @@ public class StartMenu : MonoBehaviour
     {
         hostGameButton.onClick.AddListener(HostGame);
         joinGameButton.onClick.AddListener(JoinGame);
+    }
+
+    public void StartHosting()
+    {
+        networkManager.StartHost();
+        // Optionally, hide your menu here or transition to another UI.
     }
 
     void HostGame()
@@ -35,5 +42,10 @@ public class StartMenu : MonoBehaviour
 
         // Start as a client
         MyNetworkManager.singleton.StartClient();
+    }
+    
+        public void QuitGame()
+    {
+        Application.Quit();
     }
 }

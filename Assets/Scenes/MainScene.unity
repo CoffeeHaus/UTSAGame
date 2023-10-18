@@ -586,8 +586,8 @@ MonoBehaviour:
   autoStartServerBuild: 1
   autoConnectClientBuild: 0
   sendRate: 60
-  offlineScene: 
-  onlineScene: 
+  offlineScene: Assets/Scenes/StartMenu.unity
+  onlineScene: Assets/Scenes/MainScene.unity
   transport: {fileID: 1564446961}
   networkAddress: localhost
   maxConnections: 100
@@ -613,6 +613,9 @@ MonoBehaviour:
     deliveryTimeEmaDuration: 2
   connectionQualityInterval: 3
   timeInterpolationGui: 0
+  playerName: test
+  localPlayer: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &1564446960
 Transform:
   m_ObjectHideFlags: 0
